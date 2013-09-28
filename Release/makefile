@@ -44,7 +44,7 @@ all: face
 face: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -o "face" $(OBJS) $(USER_OBJS) $(LIBS) -L/usr/local/lib -L/home/jorge/stasm4.0.0/build -lgsl -lgslcblas -lm
+	g++  -o "face" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
