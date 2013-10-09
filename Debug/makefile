@@ -38,19 +38,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: face
+all: dissertacao
 
 # Tool invocations
-face: $(OBJS) $(USER_OBJS)
+dissertacao: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -o "face" $(OBJS) $(USER_OBJS) $(LIBS) -L/usr/local/lib -L/home/jorge/stasm4.0.0/build -lgsl -lgslcblas -lm
+	g++ -o "dissertacao" $(OBJS) $(USER_OBJS) $(LIBS) -L/usr/local/lib -L/home/jorge/stasm4.0.0/build -lgsl -lgslcblas -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) face
+	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) dissertacao
 	-@echo ' '
 
 .PHONY: all clean dependents
